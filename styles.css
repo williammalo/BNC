@@ -96,6 +96,7 @@ h3 {
 }
 .button:after {
   content: " >";
+  font-family: meta;
 }
 .button-big {
   font-size: 21px;
@@ -134,18 +135,24 @@ h3 {
   background: #00314d;
   position: fixed;
   top: 0;
-  right: 160px;
+  right: 148px;
   width: 120px;
   text-align: center;
-  padding-top: 48px;
+  padding-top: 54px;
 }
 .ristourne .button {
   width: 100%;
   border-top: solid 1px;
 }
 .ristourne-ammount {
-  font-size: 30px;
+  font-size: 33px;
+  margin-top: 2px;
   font-family: korolev;
+  font-weight: bold;
+  height: 48px;
+}
+.current-page-0 .ristourne {
+  display: none;
 }
 .slider {
   width: 1000%;
