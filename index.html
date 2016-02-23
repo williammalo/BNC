@@ -1,10 +1,36 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html class="current-page-0">
 <meta charset="UTF-8">
 <title></title>
 <link rel="stylesheet" href="styles.css">
 <script src="jquery.min.js"></script>
 <script src="velocity.min.js"></script>
 <script src="scripts.js"></script>
+<div class="slider">
+  <div class="page page1">
+    <div class="side-image"><img src="home-main-image.jpg" alt=""></div>
+    <div class="main-text">
+      <h2>Bienvenue dans l’expérience ECHO!</h2>
+      <h3>La Banque Nationale est fière de présenter la Mastercard ECHO, une nouvelle carte de crédit disponible dès le mois d’avril, s’adressant à une clientèle qui désire maximiser ses remises en argent.</h3>
+      <p>Découvrez les avantages de la carte en primeur grâce à cette expérience unique en 3D. </p>
+      <p>En parcourant l’univers ECHO, cliquez sur les articles pour effectuer des achats et ainsi accumuler des remises en argent. La Banque Nationale offrira le montant total des remises accumulées par les participants au Club des petits déjeuners, alors enfilez vos lunettes et profitez d’une séance de magasinage virtuelle!</p>
+      <p>
+        <div class="button button-big next">Découvrez ECHO en 3D</div>
+      </p>
+      <p>Pas de lunettes? Pas de problème. Vous pouvez également visionner l’expérience en 2D.</p>
+      <p>
+        <div class="button next">Découvrez ECHO en 2D</div>
+      </p>
+    </div>
+  </div>
+  <div class="page page2 page-visuel"><img src="bgp1.jpg" alt="" class="main-bg"></div>
+  <div class="page page3 page-visuel"><img src="bgp2.jpg" alt="" class="main-bg"></div>
+  <div class="page page4 page-visuel"><img src="bgp3.jpg" alt="" class="main-bg"></div>
+  <div class="page page5"></div>
+  <div class="page page6"></div>
+  <div class="page page7"></div>
+  <div class="page page8"></div>
+  <div class="page page9"></div>
+</div>
 <div class="header">
   <div class="header-top"><a href="">English</a></div>
   <div class="header-bottom"><img src="header-logo-fr.png" alt=""></div>
@@ -14,30 +40,29 @@
   <div class="ristourne-ammount">10.75 $</div>
   <div class="button button-big">Terminer</div>
 </div>
-<div class="page page1">
-  <div class="side-image"><img src="home-main-image.jpg" alt=""></div>
-  <div class="main-text">
-    <h2>Bienvenue dans l’expérience ECHO!</h2>
-    <h3>La Banque Nationale est fière de présenter la Mastercard ECHO, une nouvelle carte de crédit disponible dès le mois d’avril, s’adressant à une clientèle qui désire maximiser ses remises en argent.</h3>
-    <p>Découvrez les avantages de la carte en primeur grâce à cette expérience unique en 3D. </p>
-    <p>En parcourant l’univers ECHO, cliquez sur les articles pour effectuer des achats et ainsi accumuler des remises en argent. La Banque Nationale offrira le montant total des remises accumulées par les participants au Club des petits déjeuners, alors enfilez vos lunettes et profitez d’une séance de magasinage virtuelle!</p>
-    <p>
-      <div class="button button-big">Découvrez ECHO en 3D</div>
-    </p>
-    <p>Pas de lunettes? Pas de problème. Vous pouvez également visionner l’expérience en 2D.</p>
-    <p>
-      <div class="button">Découvrez ECHO en 2D</div>
-    </p>
-  </div>
-</div>
-<div class="page page2"></div>
-<div class="page page3"></div>
-<div class="page page4"></div>
-<div class="page page5"></div>
-<div class="page page6"></div>
-<div class="page page7"></div>
-<div class="page page8"></div>
-<div class="page page9"></div>
 <div class="footer"><a href="">Conditions d'utilisation</a><a href="">Politique de confidentialité</a><a href="">Fichiers témoins</a><a href="">L'ABC de la sécurité</a>
   <div class="footer-copy">&copy; BANQUE NATIONALE DU CANADA. Tous droits réservés 2016.</div>
 </div>
+<div class="arrow arrow-prev prev"></div>
+<div class="arrow arrow-next next"></div>
+<script>
+  var position=0;
+  var slider=$(".slider")
+  var html=$("html")
+  var switchSlide=function(){
+  	slider.velocity({ right: position+"00%" },500)
+  	var i=10;
+  	for(;i--;){
+  		html.removeClass("current-page-"+i)
+  	}
+  	html.addClass("current-page-"+position)
+  }
+  $(".next").click(function(){
+  	position = Math.min(position+1,9)
+  	switchSlide();
+  })
+  $(".prev").click(function(){
+  	position = Math.max(position-1,0)
+  	switchSlide();
+  })
+</script>

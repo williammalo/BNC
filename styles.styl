@@ -1,20 +1,135 @@
+@font-face {
+    font-family: 'meta';
+    src: url('font/ufonts.com_meta-medium-roman-webfont.eot');
+    src: url('font/ufonts.com_meta-medium-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/ufonts.com_meta-medium-roman-webfont.woff2') format('woff2'),
+         url('font/ufonts.com_meta-medium-roman-webfont.woff') format('woff'),
+         url('font/ufonts.com_meta-medium-roman-webfont.ttf') format('truetype'),
+         url('font/ufonts.com_meta-medium-roman-webfont.svg#metamedium_roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'meta';
+    src: url('font/ufonts.com_meta-medium-italic-webfont.eot');
+    src: url('font/ufonts.com_meta-medium-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/ufonts.com_meta-medium-italic-webfont.woff2') format('woff2'),
+         url('font/ufonts.com_meta-medium-italic-webfont.woff') format('woff'),
+         url('font/ufonts.com_meta-medium-italic-webfont.ttf') format('truetype'),
+         url('font/ufonts.com_meta-medium-italic-webfont.svg#metamedium_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'korolev';
+    src: url('font/bnkorolev-bold-webfont.eot');
+    src: url('font/bnkorolev-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bnkorolev-bold-webfont.woff2') format('woff2'),
+         url('font/bnkorolev-bold-webfont.woff') format('woff'),
+         url('font/bnkorolev-bold-webfont.ttf') format('truetype'),
+         url('font/bnkorolev-bold-webfont.svg#bnkorolevbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'korolev';
+    src: url('font/bnkorolev-bolditalic-webfont.eot');
+    src: url('font/bnkorolev-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bnkorolev-bolditalic-webfont.woff2') format('woff2'),
+         url('font/bnkorolev-bolditalic-webfont.woff') format('woff'),
+         url('font/bnkorolev-bolditalic-webfont.ttf') format('truetype'),
+         url('font/bnkorolev-bolditalic-webfont.svg#bnkorolevbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'korolev';
+    src: url('font/bnkorolev-light-webfont.eot');
+    src: url('font/bnkorolev-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bnkorolev-light-webfont.woff2') format('woff2'),
+         url('font/bnkorolev-light-webfont.woff') format('woff'),
+         url('font/bnkorolev-light-webfont.ttf') format('truetype'),
+         url('font/bnkorolev-light-webfont.svg#bnkorolevlight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'korolev';
+    src: url('font/bnkorolev-lightitalic-webfont.eot');
+    src: url('font/bnkorolev-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bnkorolev-lightitalic-webfont.woff2') format('woff2'),
+         url('font/bnkorolev-lightitalic-webfont.woff') format('woff'),
+         url('font/bnkorolev-lightitalic-webfont.ttf') format('truetype'),
+         url('font/bnkorolev-lightitalic-webfont.svg#bnkorolevlight_italic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'korolev';
+    src: url('font/bnkorolev-medium-webfont.eot');
+    src: url('font/bnkorolev-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bnkorolev-medium-webfont.woff2') format('woff2'),
+         url('font/bnkorolev-medium-webfont.woff') format('woff'),
+         url('font/bnkorolev-medium-webfont.ttf') format('truetype'),
+         url('font/bnkorolev-medium-webfont.svg#bnkorolevmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bnkorolevmedium_italic';
+    src: url('bnkorolev-mediumitalic-webfont.eot');
+    src: url('bnkorolev-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bnkorolev-mediumitalic-webfont.woff2') format('woff2'),
+         url('bnkorolev-mediumitalic-webfont.woff') format('woff'),
+         url('bnkorolev-mediumitalic-webfont.ttf') format('truetype'),
+         url('bnkorolev-mediumitalic-webfont.svg#bnkorolevmedium_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
 *
 	box-sizing:border-box
 body
 	margin:0
 	height:100%
+	//opacity:0.5
 html
 	background:#F2F3F3
 	//background:#F2F3F3 url(mockup-home.png) no-repeat
 	color:#787878
 	height:100%
-	min-width:1250px
-	//test
+	min-width:1350px
+	font-family:meta
+	overflow:hidden
+
+h1,h2,h3,h4,h5,h6
+	font-family:korolev
+	font-weight:normal
 
 h2
 	color:#E00024
+	font-size:2em
 h3
 	color:#00314D
+	font-size:21px
 
 .button
 	background:#E00024
@@ -22,6 +137,7 @@ h3
 	padding:.4em
 	display:inline-block
 	cursor:pointer
+	font-family:korolev
 .button:after
 	content:" >"
 .button-big
@@ -36,11 +152,20 @@ h3
 	text-align:right
 	padding-right:80px
 	padding-top:18px
+	font-size:14px
 	a
 		color:inherit
 		text-decoration:none	
 .header-bottom
 	background:#E00024
+.header-bottom img
+	margin-top:-6px
+	margin-bottom:-9px
+	padding-left:58px
+
+.main-bg
+	width:100%
+	display:block
 
 .ristourne
 	color:#fff
@@ -56,14 +181,23 @@ h3
 	border-top:solid 1px
 .ristourne-ammount
 	font-size:30px
+	font-family:korolev
+.slider
+	width:1000%
+	position:relative
 .page
 	height:100%
+	width:10%
+	float:left
+.page-visuel
+	padding-top:79px
 .main-text
 	float:right
 	width:50%
 	text-align:center
 	padding:80px
 	height:100%
+	position:relative
 	padding-top:170px
 .side-image
 	float:left
@@ -71,18 +205,15 @@ h3
 	width:50%
 .side-image img
 	max-width:100%
-.header-bottom img
-	margin-top:-6px
-	margin-bottom:-6px
-	padding-left:58px
+
 .footer
 	background:#464747
-	padding:20px 80px
+	padding:14px 80px
 	width:100%
 	position:fixed
 	bottom:0
 	left:0
-	font-size:14px
+	font-size:12px
 	a
 		color:inherit
 		text-decoration:none
@@ -95,3 +226,22 @@ h3
 			border-left:none
 .footer-copy
 	float:right
+
+
+
+.arrow
+	position:fixed
+	margin:auto 0
+	top:0
+	bottom:0
+	height:70px
+	width:70px
+	cursor:pointer
+.arrow-prev
+	left:0
+	background:url(arrow-prev.png)
+.arrow-next
+	right:0
+	background:url(arrow-next.png)
+.current-page-0 .arrow
+	display:none

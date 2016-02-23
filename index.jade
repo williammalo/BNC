@@ -1,4 +1,5 @@
 doctype html
+<html class="current-page-0">
 meta(charset='UTF-8')
 
 title
@@ -7,6 +8,32 @@ link(rel="stylesheet",href="styles.css")
 script(src="jquery.min.js")
 script(src="velocity.min.js")
 script(src="scripts.js")
+
+.slider
+	.page.page1
+		.side-image
+			img(src="home-main-image.jpg", alt="")
+		.main-text
+			h2 Bienvenue dans l’expérience ECHO!
+			h3 La Banque Nationale est fière de présenter la Mastercard ECHO, une nouvelle carte de crédit disponible dès le mois d’avril, s’adressant à une clientèle qui désire maximiser ses remises en argent.
+			p Découvrez les avantages de la carte en primeur grâce à cette expérience unique en 3D. 
+			p En parcourant l’univers ECHO, cliquez sur les articles pour effectuer des achats et ainsi accumuler des remises en argent. La Banque Nationale offrira le montant total des remises accumulées par les participants au Club des petits déjeuners, alors enfilez vos lunettes et profitez d’une séance de magasinage virtuelle!
+			p
+				.button.button-big.next Découvrez ECHO en 3D
+			p Pas de lunettes? Pas de problème. Vous pouvez également visionner l’expérience en 2D.
+			p
+				.button.next Découvrez ECHO en 2D
+	.page.page2.page-visuel
+		img(src="bgp1.jpg", alt="").main-bg
+	.page.page3.page-visuel
+		img(src="bgp2.jpg", alt="").main-bg
+	.page.page4.page-visuel
+		img(src="bgp3.jpg", alt="").main-bg
+	.page.page5
+	.page.page6
+	.page.page7
+	.page.page8
+	.page.page9
 
 .header
 	.header-top
@@ -19,32 +46,43 @@ script(src="scripts.js")
 	.ristourne-ammount 10.75 $
 	.button.button-big Terminer
 
-.page.page1
-	.side-image
-		img(src="home-main-image.jpg", alt="")
-	.main-text
-		h2 Bienvenue dans l’expérience ECHO!
-		h3 La Banque Nationale est fière de présenter la Mastercard ECHO, une nouvelle carte de crédit disponible dès le mois d’avril, s’adressant à une clientèle qui désire maximiser ses remises en argent.
-		p Découvrez les avantages de la carte en primeur grâce à cette expérience unique en 3D. 
-		p En parcourant l’univers ECHO, cliquez sur les articles pour effectuer des achats et ainsi accumuler des remises en argent. La Banque Nationale offrira le montant total des remises accumulées par les participants au Club des petits déjeuners, alors enfilez vos lunettes et profitez d’une séance de magasinage virtuelle!
-		p
-			.button.button-big Découvrez ECHO en 3D
-		p Pas de lunettes? Pas de problème. Vous pouvez également visionner l’expérience en 2D.
-		p
-			.button Découvrez ECHO en 2D
-.page.page2
-.page.page3
-.page.page4
-.page.page5
-.page.page6
-.page.page7
-.page.page8
-.page.page9
-
 .footer
 	a(href="") Conditions d'utilisation
 	a(href="") Politique de confidentialité
 	a(href="") Fichiers témoins
 	a(href="") L'ABC de la sécurité
 	.footer-copy
-		&copy; BANQUE NATIONALE DU CANADA. Tous droits réservés 2016.
+		| &copy; BANQUE NATIONALE DU CANADA. Tous droits réservés 2016.
+
+
+.arrow.arrow-prev.prev
+.arrow.arrow-next.next
+
+script.
+	var position=0;
+	var slider=$(".slider")
+	var html=$("html")
+	var switchSlide=function(){
+		slider.velocity({ right: position+"00%" },500)
+		var i=10;
+		for(;i--;){
+			html.removeClass("current-page-"+i)
+		}
+		html.addClass("current-page-"+position)
+	}
+	$(".next").click(function(){
+		position = Math.min(position+1,9)
+		switchSlide();
+	})
+	$(".prev").click(function(){
+		position = Math.max(position-1,0)
+		switchSlide();
+	})
+	
+
+
+
+
+
+
+
