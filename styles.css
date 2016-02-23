@@ -139,6 +139,7 @@ h3 {
   width: 120px;
   text-align: center;
   padding-top: 54px;
+  transition: 0.5s;
 }
 .ristourne .button {
   width: 100%;
@@ -152,6 +153,9 @@ h3 {
   height: 48px;
 }
 .current-page-0 .ristourne {
+  transform: translateY(-170px);
+}
+.current-page-0 .ie8 .ristourne {
   display: none;
 }
 .slider {
