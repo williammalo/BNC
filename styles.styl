@@ -198,6 +198,8 @@ h3
 	height:100%
 	width:10%
 	float:left
+	overflow:hidden
+	position:relative
 .page-visuel
 	padding-top:79px
 .main-text
@@ -236,8 +238,6 @@ h3
 .footer-copy
 	float:right
 
-
-
 .arrow
 	position:fixed
 	margin:auto 0
@@ -246,11 +246,47 @@ h3
 	height:70px
 	width:70px
 	cursor:pointer
+	transition:.5s
 .arrow-prev
 	left:0
 	background:url(arrow-prev.png)
 .arrow-next
 	right:0
 	background:url(arrow-next.png)
-.current-page-0 .arrow
+.current-page-0 .arrow-prev
+	transform:translateX(-71px)
+.current-page-0 .arrow-next
+	transform:translateX( 71px)
+.current-page-0 .ie8 .arrow
 	display:none
+
+.icon-dollard
+	position:absolute
+	top: 80px;
+	z-index: 1;
+	cursor:pointer;
+.icon-dollard-popup
+	position:absolute;
+	bottom:45px;
+	width:0
+	left:-58px
+	transform:scale(0)
+	transform-origin: 77px 100%
+	transition:.3s
+.ie8 .icon-dollard-popup
+	display:none
+.ie8 .icon-dollard:hover .icon-dollard-popup
+	display:block
+.icon-dollard:hover .icon-dollard-popup
+	transform:scale(1)
+.icon-dollard-arrow
+	border:solid 16px transparent
+	border-top-color:#00314D
+	border-bottom-width:0
+	margin-left: 60px;
+.icon-dollard-textbox
+	width:154px
+	text-align:center
+	background:#00314D
+	padding:1em 0
+	color:#fff
