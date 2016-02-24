@@ -246,6 +246,9 @@ h3 {
   z-index: 1;
   cursor: pointer;
 }
+.icon-dollard.clicked {
+  cursor: default;
+}
 .icon-dollard-popup {
   position: absolute;
   bottom: 45px;
