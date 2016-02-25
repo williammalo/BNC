@@ -161,7 +161,7 @@ script(src="scripts.js")
 			h3 Revenez jouer aussi souvent que vous le désirez! N’oubliez pas que pour chaque participation, la Banque Nationale fera don du montant de votre remise au Club des petits déjeuners.  
 			p La carte de crédit ECHO sera disponible dès le mois d’avril. Les nouveaux clients obtiendront 3 % de remise pendant 3 mois pour les dépenses sur l’essence, l’épicerie et les achats en ligne. Après 3 mois, ils pourront profiter de 1,5 % de remise pour tous les achats de ces catégories, et 1 % de remise sur leurs autres achats. 
 			p
-				.button Retour à l'accueil
+				.button.home-link Retour à l'accueil
 	.page.page6
 	.page.page7
 	.page.page8
@@ -176,7 +176,7 @@ script(src="scripts.js")
 .ristourne
 	.ristourne-title Votre ristourne
 	.ristourne-ammount 0.00 $
-	.button.button-big Terminer
+	.button.button-big.total-link Terminer
 
 .footer
 	a(href="") Conditions d'utilisation
@@ -208,6 +208,14 @@ script.
 	})
 	$(".prev").click(function(){
 		position = Math.max(position-1,0)
+		switchSlide();
+	})
+	$(".home-link").click(function(){
+		position = 0;
+		switchSlide();
+	})
+	$(".total-link").click(function(){
+		position = 4;
 		switchSlide();
 	})
 	
