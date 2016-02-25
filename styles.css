@@ -86,6 +86,15 @@ h3 {
   color: #00314d;
   font-size: 21px;
 }
+input[type=text],
+input[type=email] {
+  color: inherit;
+  border: solid 1px #bbb;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em;
+  width: 60%;
+}
 .button {
   background: #e00024;
   color: #fff;
@@ -145,17 +154,19 @@ h3 {
   width: 100%;
   border-top: solid 1px;
 }
-.ristourne-ammount {
-  font-size: 33px;
+.ristourne .ristourne-ammount {
+  font-size: 32px;
   margin-top: 2px;
   font-family: korolev;
   font-weight: bold;
   height: 48px;
 }
-.current-page-0 .ristourne {
+.current-page-0 .ristourne,
+.current-page-4 .ristourne {
   transform: translateY(-170px);
 }
-.current-page-0 .ie8 .ristourne {
+.current-page-0 .ie8 .ristourne,
+.current-page-4 .ie8 .ristourne {
   display: none;
 }
 .slider {
@@ -231,13 +242,18 @@ h3 {
   right: 0;
   background: url("arrow-next.png");
 }
-.current-page-0 .arrow-prev {
+.current-page-0 .arrow-prev,
+.current-page-5 .arrow-prev {
   transform: translateX(-71px);
 }
-.current-page-0 .arrow-next {
+.current-page-0 .arrow-next,
+.current-page-4 .arrow-next,
+.current-page-5 .arrow-next {
   transform: translateX(71px);
 }
-.current-page-0 .ie8 .arrow {
+.current-page-0 .ie8 .arrow,
+.current-page-4 .ie8 .arrow-next,
+.current-page-5 .ie8 .arrow {
   display: none;
 }
 .icon-dollard {
