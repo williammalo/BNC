@@ -139,6 +139,15 @@ input[type=email] {
   width: 100%;
   display: block;
 }
+.main-caption {
+  color: #00314d;
+  text-align: center;
+  background: #d3d1d2;
+  font-family: korolev;
+  padding: 80px;
+  padding-top: 0;
+  font-size: 30px;
+}
 .ristourne {
   color: #fff;
   background: #00314d;
