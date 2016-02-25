@@ -65,7 +65,7 @@ html {
   background: #f2f3f3;
   color: #787878;
   height: 100%;
-  min-width: 1350px;
+  min-width: 768px;
   font-family: meta;
   overflow: hidden;
 }
@@ -142,11 +142,11 @@ input[type=email] {
 .main-caption {
   color: #00314d;
   text-align: center;
-  background: #d3d1d2;
+  background: #c7c7c7;
   font-family: korolev;
   padding: 80px;
   padding-top: 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 .ristourne {
   color: #fff;
@@ -201,10 +201,20 @@ input[type=email] {
   position: relative;
   padding-top: 170px;
 }
+@media (max-width: 1360px) {
+  .main-text {
+    width: 100%;
+  }
+}
 .side-image {
   float: left;
   text-align: center;
   width: 50%;
+}
+@media (max-width: 1360px) {
+  .side-image {
+    display: none;
+  }
 }
 .side-image img {
   max-width: 100%;

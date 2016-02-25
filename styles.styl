@@ -116,10 +116,11 @@ html
 	//background:#F2F3F3 url(mockup-confirm.png) no-repeat
 	color:#787878
 	height:100%
-	min-width:1350px
+	min-width:768px
 	font-family:meta
 	overflow:hidden
 
+	
 h1,h2,h3,h4,h5,h6
 	font-family:korolev
 	font-weight:normal
@@ -181,11 +182,11 @@ input[type=text],input[type=email]{
 .main-caption
 	color:#00314D
 	text-align:center
-	background:#D3D1D2
+	background:#C7C7C7
 	font-family:korolev
 	padding:80px
 	padding-top:0
-	font-size:30px
+	font-size:20px
 .ristourne
 	color:#fff
 	background:#00314D
@@ -228,10 +229,14 @@ input[type=text],input[type=email]{
 	height:100%
 	position:relative
 	padding-top:170px
+	@media(max-width:1360px)
+		width:100%
 .side-image
 	float:left
 	text-align:center
 	width:50%
+	@media(max-width:1360px)
+		display:none
 .side-image img
 	max-width:100%
 

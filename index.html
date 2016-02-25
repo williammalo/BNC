@@ -21,11 +21,11 @@
       </p>
       <p>Pas de lunettes? Pas de problème. Vous pouvez également visionner l’expérience en 2D.</p>
       <p>
-        <div class="button next">Découvrez ECHO remises en 2D</div>
+        <div class="button 2d-next">Découvrez ECHO remises en 2D</div>
       </p>
     </div>
   </div>
-  <div class="page page1 page-visuel"><img src="bgp1.jpg" alt="" class="main-bg">
+  <div class="page page1 page-visuel"><img src="bgp1.jpg" alt="" class="main-bg 3d">
     <div class="main-caption">Qu’est-ce qui se retrouvera au menu cette semaine? Obtenez 1,5 % de remise sur vos achats à l’épicerie. En effet, les nouveaux clients obtiennent 3 % de remise sur les achats d’essence, d’épicerie et achats en ligne, et ce, pendant les 3 premiers mois d’abonnement.</div>
     <div style="left: 36%;margin-top: 20.3%;" id="id1" class="icon-dollard"><img src="icon-dollard.png" alt="" class="icon-dollard-image">
       <div class="icon-dollard-popup">
@@ -55,7 +55,7 @@
       </div>
     </div>
   </div>
-  <div class="page page2 page-visuel"><img src="bgp2.jpg" alt="" class="main-bg">
+  <div class="page page2 page-visuel"><img src="bgp2.jpg" alt="" class="main-bg 3d">
     <div class="main-caption">Cliquez sur les pompes pour faire le plein et obtenez 1,5 % de remise sur l’essence. De plus, vous pourrez profiter d’une assurance contre les dommages et le vol, et de garanties prolongées.</div>
     <div style="left: 32%;margin-top: 22%;" id="id4" class="icon-dollard"><img src="icon-dollard.png" alt="" class="icon-dollard-image">
       <div class="icon-dollard-popup">
@@ -85,7 +85,7 @@
       </div>
     </div>
   </div>
-  <div class="page page3 page-visuel"><img src="bgp3.jpg" alt="" class="main-bg">
+  <div class="page page3 page-visuel"><img src="bgp3.jpg" alt="" class="main-bg 3d">
     <div class="main-caption">Adepte des achats en ligne? Recevez 1,5 % de remise sur toutes vos transactions (excepté celles liées au voyage, 1 %). Dès que vous aurez accumulé 25 $, vous pourrez encaisser vos remises grâce aux solutions bancaires Internet et Mobile de la Banque Nationale.</div>
     <div style="left: 29%;margin-top: 10%;" id="id7" class="icon-dollard"><img src="icon-dollard.png" alt="" class="icon-dollard-image">
       <div class="icon-dollard-popup">
@@ -234,6 +234,13 @@
   })
   $(".total-link").click(function(){
   	position = 4;
+  	switchSlide();
+  })
+  $(".2d-next").click(function(){
+  	$(".3d").attr('src', function() {
+  		return $(this).attr('src').replace('.jpg', '-2d.jpg');
+  	})
+  	position = Math.min(position+1,9)
   	switchSlide();
   })
   
