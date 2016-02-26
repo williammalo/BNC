@@ -67,6 +67,8 @@ html {
   height: 100%;
   min-width: 768px;
   font-family: meta;
+}
+.pagewrap {
   overflow: hidden;
 }
 h1,
@@ -115,6 +117,7 @@ input[type=email] {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 .header-top {
   height: 48px;
@@ -122,6 +125,7 @@ input[type=email] {
   padding-right: 80px;
   padding-top: 18px;
   font-size: 14px;
+  background: #f2f3f3;
 }
 .header-top a {
   color: inherit;
@@ -136,8 +140,14 @@ input[type=email] {
   padding-left: 58px;
 }
 .main-bg {
+  position: relative;
+  margin: 0 auto;
   width: 100%;
+  margin-bottom: -80px;
+}
+.main-bg img {
   display: block;
+  width: 100%;
 }
 .main-caption {
   color: #00314d;
@@ -145,7 +155,6 @@ input[type=email] {
   background: #c7c7c7;
   font-family: korolev;
   padding: 80px;
-  padding-top: 0;
   font-size: 20px;
 }
 .ristourne {
@@ -158,6 +167,7 @@ input[type=email] {
   text-align: center;
   padding-top: 54px;
   transition: 0.5s;
+  z-index: 1;
 }
 .ristourne .button {
   width: 100%;
@@ -282,7 +292,7 @@ ul {
 }
 .icon-dollard {
   position: absolute;
-  top: 80px;
+  top: 0;
   z-index: 1;
   cursor: pointer;
 }
