@@ -116,11 +116,13 @@ html
 	//background:#F2F3F3 url(mockup-confirm.png) no-repeat
 	color:#787878
 	height:100%
-	min-width:768px
+	min-width:1024px
 	font-family:meta
+	overflow:hidden
 
 .pagewrap
 	overflow:hidden
+	height:100%
 	
 h1,h2,h3,h4,h5,h6
 	font-family:korolev
@@ -142,8 +144,9 @@ input[type=text],input[type=email]{
 	width:60%
 }
 
-
-
+.greyblock
+	background:#C7C7C7
+	height:500px
 .button
 	background:#E00024
 	color:#fff
@@ -182,7 +185,6 @@ input[type=text],input[type=email]{
 	position:relative
 	margin:0 auto
 	width:100%
-	margin-bottom:-80px
 .main-bg img
 	display:block
 	width:100%
@@ -190,9 +192,20 @@ input[type=text],input[type=email]{
 	color:#00314D
 	text-align:center
 	background:#C7C7C7
+	background:#fff
+	background:rgba(#fff,0.9)
 	font-family:korolev
 	padding:80px
 	font-size:20px
+	position:absolute
+	width:80%
+	left:0
+	top:0
+	bottom:0
+	right:0
+	margin:auto
+	height:250px
+	z-index:1
 .ristourne
 	color:#fff
 	background:#00314D
@@ -220,6 +233,7 @@ input[type=text],input[type=email]{
 .slider
 	width:1000%
 	position:relative
+	height:100%
 .page
 	height:100%
 	width:10%
@@ -296,37 +310,48 @@ ul
 	width:auto;
 	margin:0 auto;
 	text-align:left
-.icon-dollard
+.clickable-zone
 	position:absolute
 	top:0;
 	z-index: 1;
 	cursor:pointer;
-.icon-dollard.clicked
+	width:8%
+	padding-bottom:8%
+.clickable-zone.clicked
 	cursor:default
-.icon-dollard-popup
-	position:absolute;
-	bottom:45px;
-	width:0
-	left:-58px
-	transform:scale(0)
-	transform-origin: 77px 100%
-	transition:.3s
-.ie8 .icon-dollard-popup
+.clickable-zone-popup
+	position: absolute;
+	bottom: 0;
+
+	width: 0;
+	left: 50%;
+	margin-bottom:50px;
+	margin-left:-77px;
+
+	transform: scale(0);
+
+	transform-origin: 77px 100%;
+	transition: 0.3s;
+	z-index:2
+.ie8 .clickable-zone-popup
 	display:none
-.ie8 .icon-dollard:hover .icon-dollard-popup
+.ie8 .clickable-zone:hover .clickable-zone-popup
 	display:block
-.icon-dollard:hover .icon-dollard-popup
+.clickable-zone:hover .clickable-zone-popup
 	transform:scale(1)
-.icon-dollard-arrow
+.clickable-zone-arrow
 	border:solid 16px transparent
 	border-top-color:#00314D
 	border-bottom-width:0
 	margin-left: 60px;
-.icon-dollard-textbox
+.clickable-zone-textbox
 	width:154px
 	text-align:center
 	background:#00314D
 	padding:1em 0
 	color:#fff
+.clickable-zone-zone
+	width:100%
+	background:red
 .invisible
 	visibility:hidden
