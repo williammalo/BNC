@@ -207,9 +207,10 @@ input[type=email] {
   width: 50%;
   text-align: center;
   padding: 80px;
+  padding-left: 0;
   height: 100%;
   position: relative;
-  padding-top: 170px;
+  padding-top: 120px;
 }
 @media (max-width: 1360px) {
   .main-text {
