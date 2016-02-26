@@ -125,7 +125,6 @@ input[type=email] {
   padding-right: 80px;
   padding-top: 18px;
   font-size: 14px;
-  background: #f2f3f3;
 }
 .header-top a {
   color: inherit;
@@ -215,6 +214,7 @@ input[type=email] {
 @media (max-width: 1360px) {
   .main-text {
     width: 100%;
+    padding-left: 80px;
   }
 }
 .side-image {
