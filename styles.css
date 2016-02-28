@@ -68,6 +68,13 @@ html {
   min-width: 1024px;
   font-family: meta;
   overflow: hidden;
+  font-size: 14px;
+}
+.current-page-0,
+.current-page-4,
+.current-page-5 {
+  overflow: scroll;
+  height: auto;
 }
 .pagewrap {
   overflow: hidden;
@@ -82,9 +89,12 @@ h6 {
   font-family: korolev;
   font-weight: normal;
 }
+p {
+  line-height: 20px;
+}
 h2 {
   color: #e00024;
-  font-size: 2em;
+  font-size: 32px;
 }
 h3 {
   color: #00314d;
@@ -99,14 +109,26 @@ input[type=email] {
   padding: 0.5em;
   width: 60%;
 }
+.main-caption-close {
+  background: url("x-grey.png");
+  width: 32px;
+  height: 32px;
+  top: 12px;
+  right: 12px;
+  position: absolute;
+}
+.main-caption-close:hover {
+  background: url("x-blue.png");
+}
 .greyblock {
   background: #c7c7c7;
   height: 500px;
+  margin-bottom: -500px;
 }
 .button {
   background: #e00024;
   color: #fff;
-  padding: 0.4em;
+  padding: 0.5em;
   display: inline-block;
   cursor: pointer;
   font-family: korolev;
@@ -131,6 +153,7 @@ input[type=email] {
   padding-right: 80px;
   padding-top: 18px;
   font-size: 14px;
+  background: #f2f3f3;
 }
 .header-top a {
   color: inherit;
@@ -160,17 +183,18 @@ input[type=email] {
   background: #fff;
   background: rgba(255,255,255,0.9);
   font-family: korolev;
-  padding: 80px;
+  padding: 48px;
   font-size: 20px;
   position: absolute;
-  width: 80%;
+  width: 50%;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
   margin: auto;
-  height: 250px;
+  height: 200px;
   z-index: 1;
+  min-width: 705px;
 }
 .ristourne {
   color: #fff;
@@ -268,6 +292,11 @@ input[type=email] {
   padding-left: 0;
   border-left: none;
 }
+.current-page-0 .footer,
+.current-page-4 .footer,
+.current-page-5 .footer {
+  position: static;
+}
 .footer-copy {
   float: right;
 }
@@ -311,7 +340,7 @@ ul {
 .clickable-zone {
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
   width: 8%;
   padding-bottom: 8%;
@@ -334,10 +363,10 @@ ul {
 .ie8 .clickable-zone-popup {
   display: none;
 }
-.ie8 .clickable-zone:hover .clickable-zone-popup {
+.ie8 .clickable-zone.open .clickable-zone-popup {
   display: block;
 }
-.clickable-zone:hover .clickable-zone-popup {
+.clickable-zone.open .clickable-zone-popup {
   transform: scale(1);
 }
 .clickable-zone-arrow {
